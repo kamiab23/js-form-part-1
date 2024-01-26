@@ -37,11 +37,14 @@ function addStudent() {
 }
 
 function print() {
-    for (let i = 0; i <= arr.length; i++) {
-        
-        res.innerHTML = `${i+". "+arr+"\n"}`;
+    for (let i = 0; i < arr.length; i=i+2) {
+
+        var newEl = document.createElement("p");
+        newEl.innerHTML = `${i+1+". "+arr[i]+" "+arr[i+1]}`;
+        res.appendChild(newEl);
         
     }
+    // arr.remove(value);
 }
 
 addTeacherBtn.addEventListener("click", addTeacher)
