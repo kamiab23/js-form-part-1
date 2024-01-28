@@ -12,7 +12,7 @@
         display: block;
         width: 400px;
       }
-     .q-input{
+     .q-input1, .q-input2 {
         background: white;
         border: 1px solid #a2a2a2;
         outline: none;
@@ -21,9 +21,13 @@
         width: 47%;
         border-radius: 5px;
       }
-      .q-input:focus{
+      .q-input1:focus{
         background-color: #f0f0f0;
         color: black;
+      }
+      .q-input2:focus{
+        background-color: #f0f0f0;
+        color: black; 
       }
       input[type=button]{
         cursor: pointer;
@@ -51,8 +55,8 @@
       <div class="form">
         <h2 >teacher</h2>
         <div class="keyValue-box">
-          <input class="q-input" type="text" placeholder="name" />
-          <input class="q-input" type="text" placeholder="lastname" />
+          <input class="q-input1" type="text" placeholder="name" />
+          <input class="q-input1" type="text" placeholder="lastname" />
         </div>
         <input
           class="add-teacher"
@@ -66,8 +70,8 @@
       <div class="form">
         <h2>student</h2>
         <div class="keyValue-box">
-          <input class="q-input" type="text" placeholder="name" />
-          <input class="q-input" type="text" placeholder="lastname" />
+          <input class="q-input2" type="text" placeholder="name" />
+          <input class="q-input2" type="text" placeholder="lastname" />
         </div>
         <input
           class="add-student"
