@@ -54,10 +54,41 @@ function addStudent() {
 }
 
 function print() {
+    // for reset
+    res.innerHTML = "";
+    // teachers
     var inp1 = document.querySelectorAll(".q-input1");
-    var inp2 = document.querySelectorAll(".q-input2");
+    var teacherText = document.createElement("p");
+    var text = document.createTextNode("TEACHER");
+    teacherText.appendChild(text);
+    teacherText.style.color = "green";
+    teacherText.style.fontSize = "20px";
+    teacherText.style.fontWeight = "bold";
+    res.appendChild(teacherText);
+    teacherText.innerHTML += "<br>";
+
     for (let i = 0; i < inp1.length; i++) {
-        console.log(inp1[i].value);
+        teacherText.innerHTML += inp1[i].value + " ";
+        if (i%2!=0) {
+            teacherText.innerHTML += "<br>"
+        }
+    }
+    // students
+    var inp2 = document.querySelectorAll(".q-input2");
+    var studentText = document.createElement("p");
+    var text2 = document.createTextNode("STUDENT");
+    studentText.appendChild(text2);
+    studentText.style.color = "red";
+    studentText.style.fontSize = "20px";
+    studentText.style.fontWeight = "bold";
+    res.appendChild(studentText);
+    studentText.innerHTML += "<br>";
+
+    for (let i = 0; i < inp2.length; i++) {
+        studentText.innerHTML += inp2[i].value + " ";
+        if (i%2!=0) {
+            studentText.innerHTML += "<br>"
+        }
     }
 }
 
