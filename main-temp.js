@@ -27,12 +27,19 @@ function emptyInput2() {
 function addinputs(i) {
     var input1 = document.createElement("input");
     var input2 = document.createElement("input");
+    // if (i==0) {
+    //     input1.className = "q-input1";
+    //     input2.className = "q-input1";
+    // }else if (i!=0) {
+    //     input1.className = "q-input2";
+    //     input2.className = "q-input2";
+    // }
     if (i==0) {
-        input1.className = "q-input1";
-        input2.className = "q-input1";
-    }else if (i!=0) {
-        input1.className = "q-input2";
-        input2.className = "q-input2";
+        input1.classList.add("q-input1");
+        input2.classList.add("q-input1");
+    }else{
+        input1.classList.add("q-input2");
+        input2.classList.add("q-input2");
     }
     form[i].appendChild(input1);
     form[i].appendChild(input2);
@@ -54,7 +61,7 @@ function addStudent() {
 }
 
 function print() {
-    // for reset
+    // reset
     res.innerHTML = "";
     // teachers
     var inp1 = document.querySelectorAll(".q-input1");
